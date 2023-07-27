@@ -42,6 +42,7 @@ names(surveys)
 rownames(surveys)
 summary(surveys)
 length(c(unique(surveys$species)))
+n_distinct(surveys$species)
 surveys_400 <- surveys[400, ]
 surveys_400
 surveys[nrow(surveys)/2, ]

@@ -114,7 +114,7 @@ dim(surveys_complete)
 write_csv(surveys_complete, path="data_output/surveys_complete.csv")
 
 #Question4
-transcripts <- read.csv("data/20190110.ensembl_genes.csv.gz")
+transcripts <- read_csv("data/20190110.ensembl_genes.csv.gz")
 
 dim(transcripts)
 str(transcripts)

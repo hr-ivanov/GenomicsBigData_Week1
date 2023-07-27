@@ -90,7 +90,7 @@ yearly_av_weight <- surveys_complete %>%
   summarise(avg_w = mean(weight))
 yearly_av_weight
 
-ggplot(data = yearly_av_weight, mapping = aes(x=year, y=avg_w)) +
+ggplot(data = yearly_av_weight, mapping = aes(x=year, y=avg_w, color = species_id)) +
   geom_line() +
   facet_wrap(~species_id)
 
@@ -155,7 +155,7 @@ sleep_plot <- ggplot(data=msleep, mapping = aes(x=sleep_cycle, y=sleep_total, co
 
 sleep_plot + 
   scale_color_hue(labels=c("Carnivore", "Herbivore", "Insectivore", "Omnivore", "No data")) +
-  labs(fill="Diet", color="Diet",
+  labs(fill ="Diet", color="Diet",
     x="Sleep cycle", y="Total amount of sleep (hours)") +
   scale_fill_discrete(labels=c("Carnivore", "Herbivore", "Insectivore", "Omnivore", "No data"))
 
